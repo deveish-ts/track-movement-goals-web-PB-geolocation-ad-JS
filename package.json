@@ -1,0 +1,25 @@
+{
+  "name": "mapel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishraque-dev/track-movement-goals-web-PB-geolocation-ad-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishraque-dev/track-movement-goals-web-PB-geolocation-ad-JS/issues"
+  },
+  "homepage": "https://github.com/ishraque-dev/track-movement-goals-web-PB-geolocation-ad-JS#readme",
+  "dependencies": {
+    "leaflet": "^1.9.2",
+    "lite-server": "^2.6.1"
+  }
+}
