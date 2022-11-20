@@ -20,16 +20,23 @@ if (navigator.geolocation) {
     (position) => {
       const { latitude, longitude } = position.coords;
 
-      const map = L.map('map').setView([latitude, longitude], 10);
+      var map = L.map('map').setView([latitude, longitude], 13);
 
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        scrollWheelZoom: true,
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
+      var popup = L.popup();
 
+      function onMapClick(e) {
+        popup
+          .setLatLng(e.latlng)
+          .setContent('You clicked the map at ' + e.latlng.toString())
+          .openOn(map);
+      }
+
+      map.on('click', onMapClick);
       L.marker([latitude, longitude])
-
         .addTo(map)
         .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
         .openPopup();
@@ -39,3 +46,4 @@ if (navigator.geolocation) {
     }
   );
 }
+// checking
